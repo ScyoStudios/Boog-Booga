@@ -1,0 +1,1180 @@
+local Player = game.Players.LocalPlayer.UserId
+ 
+--
+if Player ~= 2952295644 then 
+game.Players.LocalPlayer:Kick("You Aren't Whitelisted To Use This Script!")
+else
+print("You Are Whitelisted!")
+
+
+----
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local colors = {
+    SchemeColor = Color3.fromRGB(0,255,255),
+    Background = Color3.fromRGB(0, 0, 0),
+    Header = Color3.fromRGB(0, 0, 0),
+    TextColor = Color3.fromRGB(255,0,0),
+    ElementColor = Color3.fromRGB(20, 20, 20)
+}
+local Window = Library.CreateLib("Auto Farm", colors)
+
+-- MAIN
+local Main = Window:NewTab("Plant")
+local MainSection = Main:NewSection("Plant")
+MainSection:NewButton("Bloodfruit", "Plants Bloodfruit", function()
+
+
+
+
+----------------------------------- 
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace.Deployables:GetChildren()) do
+        if v.Name == "Plant Box" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 1000 then
+            game.ReplicatedStorage.Events.InteractStructure:FireServer(v, "Bloodfruit")
+        end
+end
+end)
+-----------------------------------------------------------------------------------------------------
+MainSection:NewButton("Berry", "Plants Berries", function()
+
+
+
+
+----------------------------------- 
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace.Deployables:GetChildren()) do
+        if v.Name == "Plant Box" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 1000 then
+            game.ReplicatedStorage.Events.InteractStructure:FireServer(v, "Berry")
+        end
+end
+end)
+-------------------------------------------------------------
+MainSection:NewButton("Lemon", "Plants Lemons", function()
+
+
+
+
+----------------------------------- 
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace.Deployables:GetChildren()) do
+        if v.Name == "Plant Box" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 1000 then
+            game.ReplicatedStorage.Events.InteractStructure:FireServer(v, "Lemon")
+        end
+end
+end)
+----------------------------------------------------------------
+MainSection:NewButton("Bluefruit", "Plants Bluefruit", function()
+
+
+
+
+----------------------------------- 
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace.Deployables:GetChildren()) do
+        if v.Name == "Plant Box" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 1000 then
+            game.ReplicatedStorage.Events.InteractStructure:FireServer(v, "Bluefruit")
+        end
+end
+end)
+--------------------------------------------------------------------------
+MainSection:NewButton("Sunfruit", "Plants Sunfruit", function()
+
+
+
+
+----------------------------------- 
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace.Deployables:GetChildren()) do
+        if v.Name == "Plant Box" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 1000 then
+            game.ReplicatedStorage.Events.InteractStructure:FireServer(v, "Sunfruit")
+        end
+end
+end)
+-------------------------------------------------------------------------------
+MainSection:NewButton("Jelly", "Plants Jelly", function()
+
+
+
+
+----------------------------------- 
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace.Deployables:GetChildren()) do
+        if v.Name == "Plant Box" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 1000 then
+            game.ReplicatedStorage.Events.InteractStructure:FireServer(v, "Jelly")
+        end
+end
+end)
+-------------------------------------------------------------------------------------
+--Second
+local Second = Window:NewTab("Collect")
+---------------------------------------------
+local SecondSection = Second:NewSection("Collection")
+---------------------------
+SecondSection:NewButton("Bloodfruit", "Collects Bloodfruit", function()
+
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace:GetChildren()) do
+        if v.Name == "Bloodfruit Bush" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 1000 then
+            game.ReplicatedStorage.Events.Pickup:FireServer(v)
+end
+	end
+end)
+----------------------------
+SecondSection:NewButton("Berry", "Collects Berries", function()
+
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace:GetChildren()) do
+        if v.Name == "Berry Bush" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 1000 then
+            game.ReplicatedStorage.Events.Pickup:FireServer(v)
+end
+	end
+end)
+--------------------------------
+SecondSection:NewButton("Lemon", "Collects Lemons", function()
+
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace:GetChildren()) do
+        if v.Name == "Lemon Tree" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 1000 then
+            game.ReplicatedStorage.Events.Pickup:FireServer(v)
+end
+	end
+end)
+----------------------------
+SecondSection:NewButton("Bluefruit", "Collects Bluefruit", function()
+
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace:GetChildren()) do
+        if v.Name == "Bluefruit Bush" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 1000 then
+            game.ReplicatedStorage.Events.Pickup:FireServer(v)
+end
+	end
+end)
+---------------------------------------
+SecondSection:NewButton("Sunfruit", "Collects Sunfruit", function()
+
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace:GetChildren()) do
+        if v.Name == "Sunfruit Bush" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 1000 then
+            game.ReplicatedStorage.Events.Pickup:FireServer(v)
+end
+	end
+end)
+-------------------------------------
+SecondSection:NewButton("Jelly", "Collects Jelly", function()
+
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace:GetChildren()) do
+        if v.Name == "Jelly Crop" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 1000 then
+            game.ReplicatedStorage.Events.Pickup:FireServer(v)
+end
+	end
+end)
+----------------
+SecondSection:NewButton("Banana", "Collects Bananas", function()
+
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace:GetChildren()) do
+        if v.Name == "Banana Tree" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 1000 then
+            game.ReplicatedStorage.Events.Pickup:FireServer(v)
+end
+	end
+end)
+----------------
+MainSection:NewButton("Banana", "Plants Bananas", function()
+
+
+
+
+----------------------------------- 
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace.Deployables:GetChildren()) do
+        if v.Name == "Plant Box" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 1000 then
+            game.ReplicatedStorage.Events.InteractStructure:FireServer(v, "Banana")
+        end
+end
+end)
+---------------------------------------
+---------
+------------
+local Third = Window:NewTab("AutoHeal")
+---------------------------------------------
+local ThirdSection = Third:NewSection("AutoHeal")
+---------------------------
+ThirdSection:NewDropdown("AutoHeal", "AutoHeal Selection (Rejoin When Switching From One To Another Else You Will Be Consuimg Both At The Same Time)", {"Bloodfruit", "Berry", "Lemon", "Bluefruit"}, function(currentOption)
+   -- print(currentOption)
+--------
+    local Booga = Instance.new("Frame")
+
+    local AutoEatbtn = Instance.new("TextButton")
+
+    local AutoEatFoodNamekb = Instance.new("TextBox")
+
+    local AutoEatkb = Instance.new("TextBox")
+
+
+    -- Properties
+
+
+
+
+    Booga.Name = "Booga"
+    Booga.Parent = ScreenGui
+ 
+
+    AutoEatbtn.Name = "AutoEatbtn"
+    AutoEatbtn.Parent = Booga
+   
+    AutoEatbtn.Text = currentOption
+
+
+
+
+    AutoEatFoodNamekb.Name = "AutoEatFoodNamekb"
+    AutoEatFoodNamekb.Parent = Booga
+    AutoEatFoodNamekb.Text = currentOption
+
+
+local Bloodfruit = "Bloodfruit"
+local Bluefruit = "Bluefruit"
+local Lemon = "Lemon"
+local Berry = "Berry"
+
+
+    AutoEatkb.Name = "AutoEatkb"
+    AutoEatkb.Parent = Booga
+    AutoEatkb.TextColor3 = Color3.new(1, 1, 1)
+    AutoEatkb.TextScaled = true
+    AutoEatkb.TextSize = 14
+    AutoEatkb.TextWrapped = true
+AutoEatkb = bind
+bind = AutoEatkb
+
+    local Heal = CurrentOption
+    local bind = 'q'
+
+    local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+    local Toggle = false
+    game:GetService('RunService').Heartbeat:connect(function()
+       if Toggle then
+           if Humanoid.Health ~= 100 then
+               Event = game:GetService("ReplicatedStorage").Events.UseBagItem
+        Event:FireServer(AutoEatFoodNamekb.Text)
+        Event:FireServer(AutoEatFoodNamekb.Text)
+        Event:FireServer(AutoEatFoodNamekb.Text)
+           end
+       end
+    end)
+
+    local mouse = game.Players.LocalPlayer:GetMouse()
+    mouse.KeyDown:connect(function(key)
+       if key == bind then
+           Toggle = not Toggle
+           print(Toggle)
+       end
+    end)
+--------------END OF BLOODFRUIT
+
+----------------------
+end)
+--[[
+
+
+
+
+
+--]]
+----------------------AFK FARMING
+local Fourth = Window:NewTab("AFKFarming")
+---------------------------------------------
+local FourthSection = Fourth:NewSection("AFKFarming")
+
+FourthSection:NewToggle("AFKBerryFarming", "This AFK Farms Berries!", function(state)
+    if state then
+        --print("Toggle On")
+local hotdogs = 1
+
+while hotdogs < 1000000 do
+------------
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace.Deployables:GetChildren()) do
+        if v.Name == "Plant Box" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 1000 then
+            game.ReplicatedStorage.Events.InteractStructure:FireServer(v, "Berry")
+        end
+end
+wait(32)
+-----------
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace:GetChildren()) do
+        if v.Name == "Berry Bush" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 1000 then
+            game.ReplicatedStorage.Events.Pickup:FireServer(v)
+end
+end
+end
+    else
+return
+end
+--        print("Toggle Off")
+end)
+---------------
+
+FourthSection:NewToggle("AFKBloodfruitFarming", "This AFK Farms Bloodfruit!", function(state)
+    if state then
+        --print("Toggle On")
+local Chicken = 1
+while Chicken < 1000000 do
+------------
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace.Deployables:GetChildren()) do
+        if v.Name == "Plant Box" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 5000 then
+            game.ReplicatedStorage.Events.InteractStructure:FireServer(v, "Bloodfruit")
+        end
+end
+wait(165)
+-----------
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace:GetChildren()) do
+        if v.Name == "Bloodfruit Bush" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 5000 then
+            game.ReplicatedStorage.Events.Pickup:FireServer(v)
+end
+end
+end
+    else
+end
+--        print("Toggle Off")
+end)
+---------------------
+FourthSection:NewToggle("AFKLemonFarming", "This AFK Farms Lemons!", function(state)
+    if state then
+        --print("Toggle On")
+local Steak = 1
+while Steak < 100000 do
+------------
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace.Deployables:GetChildren()) do
+        if v.Name == "Plant Box" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 5000 then
+            game.ReplicatedStorage.Events.InteractStructure:FireServer(v, "Lemon")
+        end
+end
+wait(135)
+-----------
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace:GetChildren()) do
+        if v.Name == "Lemon Tree" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 5000 then
+            game.ReplicatedStorage.Events.Pickup:FireServer(v)
+end
+end
+end
+    else
+end
+--        print("Toggle Off")
+end)
+-----------------------
+FourthSection:NewToggle("AFKBluefruitFarming", "This AFK Farms Bluefruit!", function(state)
+    if state then
+        --print("Toggle On")
+local Pork = 1
+while Pork < 10000000 do
+------------
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace.Deployables:GetChildren()) do
+        if v.Name == "Plant Box" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 5000 then
+            game.ReplicatedStorage.Events.InteractStructure:FireServer(v, "Bluefruit")
+        end
+end
+wait(25)
+-----------
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace:GetChildren()) do
+        if v.Name == "Bluefruit Bush" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 5000 then
+            game.ReplicatedStorage.Events.Pickup:FireServer(v)
+end
+end
+end
+    else
+end
+--        print("Toggle Off")
+end)
+--------------------
+FourthSection:NewToggle("AFKBloodfruitFarming", "This AFK Farms Bloodfruit!", function(state)
+    if state then
+        --print("Toggle On")
+local Chicken = 1
+while Chicken < 5 do
+------------
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace.Deployables:GetChildren()) do
+        if v.Name == "Plant Box" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 5000 then
+            game.ReplicatedStorage.Events.InteractStructure:FireServer(v, "Jelly")
+        end
+end
+wait(135)
+-----------
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+ 
+    for _, v in pairs(workspace:GetChildren()) do
+        if v.Name == "Jelly Crop" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 5000 then
+            game.ReplicatedStorage.Events.Pickup:FireServer(v)
+end
+end
+end
+    else
+end
+--        print("Toggle Off")
+end)
+----------------------------
+FourthSection:NewDropdown("AutoFeed", "AutoFeed Selection (Rejoin When Switching From One To Another Else You Will Be Consuimg Both At The Same Time)", {"Bloodfruit", "Berry", "Lemon", "Bluefruit"}, function(currentOption)
+--------
+    local Booga = Instance.new("Frame")
+
+    local AutoEatbtn = Instance.new("TextButton")
+
+    local AutoEatFoodNamekb = Instance.new("TextBox")
+
+    local AutoEatkb = Instance.new("TextBox")
+
+
+    -- Properties
+
+
+
+
+    Booga.Name = "Booga"
+    Booga.Parent = ScreenGui
+ 
+
+    AutoEatbtn.Name = "AutoEatbtn"
+    AutoEatbtn.Parent = Booga
+   
+    AutoEatbtn.Text = currentOption
+
+
+
+
+    AutoEatFoodNamekb.Name = "AutoEatFoodNamekb"
+    AutoEatFoodNamekb.Parent = Booga
+    AutoEatFoodNamekb.Text = currentOption
+
+
+local Bloodfruit = "Bloodfruit"
+local Bluefruit = "Bluefruit"
+local Lemon = "Lemon"
+local Berry = "Berry"
+
+
+    AutoEatkb.Name = "AutoEatkb"
+    AutoEatkb.Parent = Booga
+
+    local Heal = CurrentOption
+    local bind = 'q'
+    local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+    local Toggle = false
+    game:GetService('RunService').Heartbeat:connect(function()
+       if Toggle then
+           if Humanoid.Health < 50 then
+               Event = game:GetService("ReplicatedStorage").Events.UseBagItem
+Event:FireServer(AutoEatFoodNamekb.Text)
+Event:FireServer(AutoEatFoodNamekb.Text)        
+           end
+       end
+    end)
+
+    local mouse = game.Players.LocalPlayer:GetMouse()
+    mouse.KeyDown:connect(function(key)
+       if key == bind then
+           Toggle = not Toggle
+end
+           print(Toggle)
+    end)
+-----------
+end)
+----------
+local PlantBox = Window:NewTab("PlantBoxPlace")
+local PlantBoxSection = PlantBox:NewSection("Plant Box Place")
+
+PlantBoxSection:NewButton("PlantBoxLayer1", "Easily Place PlantBoxes For Farming", function()
+	-- PlantBoxesLayer1
+    local Amount = 100
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, -9.5), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, 9.5), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-9.5, -3, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(9.5, -3, -0), 0)
+    end 
+-------------------
+wait(5)
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+--
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, -9.2), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-3, -3, 9.2), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-9.2, -3, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(9.2, -3, -0), 0)
+--
+    end 
+-------------------
+wait(5)
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, -8.9), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, 8.9), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-8.9, -3, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(8.9, -3, -0), 0)
+    end 
+--------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, -8.6), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, 8.6), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-8.6, -3, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(8.6, -3, -0), 0)
+    end 
+--------
+wait(5)
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, -8.3), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, 8.3), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-8.3, -3, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(8.3, -3, -0), 0)
+    end 
+--------
+wait(5)
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, -8), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, 8), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-8, -3, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(8, -3, -0), 0)
+    end 
+--------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, -7.7), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, 7.7), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-7.7, -3, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(7.7, -3, -0), 0)
+    end 
+--------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, -7.4), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, 7.4), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-7.4, -3, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(7.4, -3, -0), 0)
+    end 
+--------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, -7.1), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, 7.1), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-7.1, -3, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(7.1, -3, -0), 0)
+    end 
+--------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, -6.8), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, 6.8), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-6.8, -3, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(6.8, -3, -0), 0)
+    end 
+--------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, -6.5), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, 6.5), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-6.5, -3, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(6.5, -3, -0), 0)
+    end 
+-------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, -6.2), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, 6.2), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-6.2, -3, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(6.2, -3, -0), 0)
+    end 
+-------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, -5.9), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, 5.8), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-5.9, -3, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(5.9, -3, -0), 0)
+    end 
+-------
+wait(5)
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, -5.6), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -3, 5.6), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-5.6, -3, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(5.6, -3, -0), 0)
+    end 
+end)
+---------
+PlantBoxSection:NewButton("PlantBoxLayer2(LAG/MAY KICK YOU)", "Easily Place PlantBoxes For Farming", function()
+        --PlantBoxesLayer2
+
+    local Amount = 100
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, -9.5), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, 9.5), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-9.5, -2.5, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(9.5, -2.5, -0), 0)
+    end 
+-------------------
+wait(5)
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+--
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, -9.2), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-2.5, -2.5, 9.2), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-9.2, -2.5, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(9.2, -2.5, -0), 0)
+--
+    end 
+
+-------------------
+------------------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, -8.9), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, 8.9), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-8.9, -2.5, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(8.9, -2.5, -0), 0)
+    end 
+--------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, -8.6), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, 8.6), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-8.6, -2.5, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(8.6, -2.5, -0), 0)
+    end 
+--------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, -8.3), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, 8.3), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-8.3, -2.5, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(8.3, -2.5, -0), 0)
+    end 
+--------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, -8), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, 8), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-8, -2.5, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(8, -2.5, -0), 0)
+    end 
+--------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, -7.7), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, 7.7), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-7.7, -2.5, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(7.7, -2.5, -0), 0)
+    end 
+--------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, -7.4), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, 7.4), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-7.4, -2.5, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(7.4, -2.5, -0), 0)
+    end 
+--------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, -7.1), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, 7.1), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-7.1, -2.5, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(7.1, -2.5, -0), 0)
+    end 
+--------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, -6.8), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, 6.8), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-6.8, -2.5, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(6.8, -2.5, -0), 0)
+    end 
+--------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, -6.5), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, 6.5), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-6.5, -2.5, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(6.5, -2.5, -0), 0)
+    end 
+-------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, -6.2), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, 6.2), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-6.2, -2.5, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(6.2, -2.5, -0), 0)
+    end 
+-------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, -5.9), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, 5.8), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-5.9, -2.5, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(5.9, -2.5, -0), 0)
+    end 
+-------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, -5.6), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2.5, 5.6), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-5.6, -2.5, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(5.6, -2.5, -0), 0)
+    end 
+end)
+----------
+PlantBoxSection:NewButton("PlantBoxLayer3(LAG/MAY KICK YOU)", "Easily Place PlantBoxes For Farming", function()
+        --PlantBoxesLayer3
+
+    local Amount = 100
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, -9.5), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, 9.5), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-9.5, -2, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(9.5, -2, -0), 0)
+    end 
+
+-------------------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+--
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, -9.2), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-2, -2, 9.2), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-9.2, -2, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(9.2, -2, -0), 0)
+--
+    end 
+
+-------------------
+------------------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, -8.9), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, 8.9), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-8.9, -2, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(8.9, -2, -0), 0)
+    end 
+--------
+wait(5)
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, -8.6), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, 8.6), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-8.6, -2, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(8.6, -2, -0), 0)
+    end 
+--------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, -8.3), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, 8.3), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-8.3, -2, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(8.3, -2, -0), 0)
+    end 
+--------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, -8), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, 8), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-8, -2, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(8, -2, -0), 0)
+    end 
+--------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, -7.7), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, 7.7), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-7.7, -2, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(7.7, -2, -0), 0)
+    end 
+--------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, -7.4), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, 7.4), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-7.4, -2, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(7.4, -2, -0), 0)
+    end 
+--------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, -7.1), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, 7.1), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-7.1, -2, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(7.1, -2, -0), 0)
+    end 
+--------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, -6.8), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, 6.8), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-6.8, -2, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(6.8, -2, -0), 0)
+    end 
+--------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, -6.5), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, 6.5), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-6.5, -2, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(6.5, -2, -0), 0)
+    end 
+-------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, -6.2), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, 6.2), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-6.2, -2, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(6.2, -2, -0), 0)
+    end 
+-------
+wait(5)
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, -5.9), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, 5.8), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-5.9, -2, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(5.9, -2, -0), 0)
+    end 
+-------
+wait(5)
+
+
+    for i = 1, Amount do wait()
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local RootPart = LocalPlayer.Character.HumanoidRootPart
+    local cframe = RootPart.CFrame
+    local Remote = game:GetService("ReplicatedStorage").Events.PlaceStructure
+Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, -5.6), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-0, -2, 5.6), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(-5.6, -2, -0), 0)
+    Remote:FireServer("Plant Box", cframe * CFrame.new(5.6, -2, -0), 0)
+    end 
+end)
+-----------
+local Settings = Window:NewTab("Settings")
+local SettingsSection = Settings:NewSection("ToggleGUI")
+SettingsSection:NewKeybind("ToggleGUI", "Set Key To Toggle GUI", Enum.KeyCode.RightShift, function()
+	Library:ToggleUI()
+end)
+SettingsSection:NewButton("AntiAFK", "Allows You To AFK Without Getting Kicked", function()
+--    print("Clicked")
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+--
+end)
+SettingsSection:NewButton("RemoveRain", "Removes Rain",function()
+Render:Button("Remove Rain", function()
+    if workspace:FindFirstChild('RainPart') ~= nil then
+        game:GetService("Workspace").RainPart:Destroy()
+        game.ReplicatedStorage.Sounds.Nature.Rain:Stop()
+        game.ReplicatedStorage.Sounds.Nature.Thunder:Stop()
+        game.Lighting.Rain:Destroy()
+        game.ReplicatedStorage.Skies.Shine:Clone().Parent = game.Lighting
+end
+end)
+
+SettingsSection:NewButton("ServerHop", "Joins Another Server",function()
+local Servers = game.HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/10758111998/servers/Public?sortOrder=Asc&limit=100"))
+    for i,v in pairs(Servers.data) do
+        if v.playing ~= v.maxPlayers then
+            game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, v.id)
+        end
+    end
+end)
+end)
+end
